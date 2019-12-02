@@ -5,9 +5,9 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/activiti?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://192.168.1.183:3306/activiti?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
     username: root
-    password: 123123
+    password: root
     initial-size: 10
     max-active: 100
     min-idle: 10
@@ -45,3 +45,11 @@ spring:
   activiti:
     database-schema-update: true
     check-process-definitions: false
+
+  resources:
+    static-locations: classpath:/
+
+logging:
+  level:
+    com.len.mapper: DEBUG
+    org.activiti.engine.impl.persistence.entity: debug
